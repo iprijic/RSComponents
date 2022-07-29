@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Programming Projects\dotnet\AspNetCore\AspNetCoreOData\AspNetCoreOData-8.0.3\src\Microsoft.AspNetCore.OData\Microsoft.AspNetCore.OData.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore.SqlServer\EFCore.SqlServer.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore\EFCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Programming Projects\Networking\OData\odata.net\odata.net-7.9.3\src\Microsoft.OData.Client\Microsoft.OData.Client.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Programming Projects\Networking\OData\odata.net\odata.net-7.9.3\src\Microsoft.OData.Core\Microsoft.OData.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Programming Projects\Networking\OData\odata.net\odata.net-7.9.3\src\Microsoft.OData.Edm\Microsoft.OData.Edm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Query\" />
+  </ItemGroup>
+
+</Project>

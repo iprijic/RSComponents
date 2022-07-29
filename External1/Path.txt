@@ -1,0 +1,44 @@
+---- EF Core
+<!--<Project Sdk="Microsoft.NET.Sdk.Web">-->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.3" />
+    <!--<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Programming Projects\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore.Abstractions\EFCore.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\Programming Projects\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore.Analyzers\EFCore.Analyzers.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\Programming Projects\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore.Relational\EFCore.Relational.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\Programming Projects\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore.SqlServer\EFCore.SqlServer.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\Programming Projects\Programming Projects\dotnet\core\.NET 5.0\EF Core\efcore-5.0.12\src\EFCore\EFCore.csproj" />
+  </ItemGroup>
+
+</Project>
+----
+
+---- ASP.NET OData
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Programming Projects\Programming Projects\dotnet\AspNetCore\AspNetCoreOData\AspNetCoreOData-8.0.3\src\Microsoft.AspNetCore.OData\Microsoft.AspNetCore.OData.csproj" />
+    <ProjectReference Include="..\Oleum.API.Business\Oleum.API.Business.csproj" />
+    <ProjectReference Include="..\Oleum.API.Protocol\Oleum.API.Protocol.csproj" />
+  </ItemGroup>
+
+</Project>
+----
