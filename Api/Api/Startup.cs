@@ -52,21 +52,21 @@ namespace Api
 
             //services.AddSingleton<IODataControllerActivator, ODataControllerActivator>();
 
-            services.AddControllers()
+            services.AddHttpContextAccessor().AddControllers()
             .AddOData((opt, provider) =>
             {
                 opt.AddRouteComponents(
                     "feed", 
                     Model.ModelBuilder.GetEdmModel(typeof(Packt.Shared.NorthwindContext)),
-                    services => services.AddDbContext<DbContext,Packt.Shared.NorthwindContext>(options => options.UseSqlServer(connectionString).UseLoggerFactory(new Packt.Shared.ConsoleLoggerFactory()))
+                    routeServices => routeServices.AddDbContext<DbContext,Packt.Shared.NorthwindContext>(options => options.UseSqlServer(connectionString).UseLoggerFactory(new Packt.Shared.ConsoleLoggerFactory()))
                     )
                 .Count().Filter().Expand().Select().OrderBy().SetMaxTop(100)
                 .Conventions.Add(new ODataControllerActivator(new ControllerDomain(controllerTypes)) /*provider.GetRequiredService<IODataControllerActivator>()*/);
             });
 
-            services.AddDbContext<DbContext, Packt.Shared.NorthwindContext>(options =>
-              options.UseSqlServer(connectionString)
-              .UseLoggerFactory(new Packt.Shared.ConsoleLoggerFactory()));
+            //services.AddDbContext<DbContext, Packt.Shared.NorthwindContext>(options =>
+            //  options.UseSqlServer(connectionString)
+            //  .UseLoggerFactory(new Packt.Shared.ConsoleLoggerFactory()));
 
             //services.AddDbContext<Packt.Shared.NorthwindContext>(options =>
             //  options.UseSqlServer(connectionString)
