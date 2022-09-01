@@ -13,8 +13,4 @@
     <ProjectReference Include="..\..\..\..\..\Programming Projects\Networking\OData\odata.net\odata.net-7.9.3\src\Microsoft.OData.Edm\Microsoft.OData.Edm.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Query\" />
-  </ItemGroup>
-
 </Project>

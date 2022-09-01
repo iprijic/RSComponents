@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using API.Protocol.OData;
 using API.Protocol.OData.Controller;
+using Api.Query;
 
 //using Microsoft.Extensions.DependencyInjection; // IServiceCollection
 
@@ -43,6 +44,7 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=true;MultipleActiveResultsets=true;";
+            string routePrefix = "feed";
 
             IEnumerable<Type> controllerTypes = typeof(Api.Startup).Assembly.GetTypes()
                 .Where(d =>
@@ -52,16 +54,24 @@ namespace Api
 
             //services.AddSingleton<IODataControllerActivator, ODataControllerActivator>();
 
+           // services.AddSingleton<IQueryableBuilder, QueryableBuilder>();
+
             services.AddHttpContextAccessor().AddControllers()
             .AddOData((opt, provider) =>
             {
                 opt.AddRouteComponents(
-                    "feed", 
+                    routePrefix, 
                     Model.ModelBuilder.GetEdmModel(typeof(Packt.Shared.NorthwindContext)),
-                    routeServices => routeServices.AddDbContext<DbContext,Packt.Shared.NorthwindContext>(options => options.UseSqlServer(connectionString).UseLoggerFactory(new Packt.Shared.ConsoleLoggerFactory()))
+                    routeServices => routeServices
+                    .AddSingleton<IQueryableBuilder, QueryableBuilder>()
+                    .AddDbContext<DbContext,Packt.Shared.NorthwindContext>(options => options.UseSqlServer(connectionString).UseLoggerFactory(new Packt.Shared.ConsoleLoggerFactory()))
+                    //.AddSingleton<IQueryableBuilder, QueryableBuilder>()
                     )
                 .Count().Filter().Expand().Select().OrderBy().SetMaxTop(100)
                 .Conventions.Add(new ODataControllerActivator(new ControllerDomain(controllerTypes)) /*provider.GetRequiredService<IODataControllerActivator>()*/);
+
+               // opt.RouteComponents[routePrefix].ServiceProvider.GetService(typeof(IQueryableBuilder));
+
             });
 
             //services.AddDbContext<DbContext, Packt.Shared.NorthwindContext>(options =>
