@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query.Validator;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
@@ -33,6 +35,24 @@ namespace Api.Query
             BinaryExpression exprEqual = Expression.Equal(Expression.Call(exprProperty, nameof(String.ToString), Type.EmptyTypes), exprKeyValue);
             LambdaExpression exprLambda = Expression.Lambda(exprEqual, p);
             return query.Provider.CreateQuery(Expression.Call(typeof(Queryable), nameof(Queryable.Where), new[] { query.ElementType }, query.Expression, exprLambda));
+        }
+
+        public IQueryable ApplyODataQueryAsync(IQueryable query, ODataQueryOptions option)
+        {
+
+            option.Validate(new ODataValidationSettings()
+            {
+                AllowedQueryOptions = AllowedQueryOptions.Expand | AllowedQueryOptions.Select | AllowedQueryOptions.OrderBy | AllowedQueryOptions.Top | AllowedQueryOptions.Skip | AllowedQueryOptions.Count | AllowedQueryOptions.Filter,
+                AllowedArithmeticOperators = AllowedArithmeticOperators.All,
+                AllowedFunctions = AllowedFunctions.AllFunctions, // AllowedFunctions.All,
+                AllowedLogicalOperators = AllowedLogicalOperators.All,
+                MaxOrderByNodeCount = 2,
+                MaxTop = 100,
+                MaxExpansionDepth = 0 //100
+            });
+
+            IQueryable result = option.ApplyTo(query);
+            return result;
         }
     }
 }
