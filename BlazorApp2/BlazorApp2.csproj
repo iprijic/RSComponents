@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+	  
+	 <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Remove="Microsoft.AspNetCore.App" />
+		<FrameworkReference Remove="Microsoft.NetCore.App" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<!--<AspNetCoreModuleV2InProcessHandlerDll>C:\Users\Igor\Source\Repos\aspnetcore\artifacts\bin\AspNetCoreModuleShim\x64\Debug\aspnetcorev2.dll</AspNetCoreModuleV2InProcessHandlerDll>-->
+		<AspNetCoreModuleV2InProcessHandlerDll>C:\Users\Igor\Source\Repos\aspnetcore\artifacts\bin\InProcessRequestHandler\x64\Debug\aspnetcorev2_inprocess.dll</AspNetCoreModuleV2InProcessHandlerDll>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ANFrameworkProxy.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,12 +1,4 @@
-﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:5942",
-      "sslPort": 0
-    }
-  },
+{
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -18,10 +10,41 @@
     "ReactJS.Web": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5000"
+      },
+      "distributionName": ""
+    },
+    "IIS Express Custom": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\IIS Express\\iisexpress.exe",
+      "commandLineArgs": "/config:\"C:\\Programming Projects\\Private\\Restack\\Components\\.vsd\\Restack.Components\\config\\React\\applicationhost.config\" /site:\"ReactJS.Web\" /apppool:\"ReactJS.Web AppPool\"",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_MODULE_DEBUG_FILE": "C:\\Programming Projects\\Private\\Restack\\Components\\logs\\IISLog1.txt",
+        "ANCMV2_PATH": "C:\\Users\\Igor\\Source\\Repos\\aspnetcore\\artifacts\\bin\\AspNetCoreModuleShim\\x64\\Debug\\aspnetcorev2.dll",
+        "LAUNCHER_PATH": "bin\\Debug\\net6.0\\ReactJS.Web",
+        "REQUEST_HANDLER_INPROCESS_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug",
+        "ANCM_LAUNCHER_PATH": "C:\\Programming Projects\\Private\\Restack\\Components\\ReactJS.Web\\bin\\Debug\\net6.0\\ReactJS.Web.exe"
       }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5942",
+      "sslPort": 0
     }
   }
 }

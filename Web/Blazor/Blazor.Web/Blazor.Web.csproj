@@ -2,10 +2,37 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+	  <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+	 <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Configurator\" />
-  </ItemGroup>
+	<ItemGroup>
+	<FrameworkReference Remove="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+		
+	</ItemGroup>
+
+  <!-- <ItemGroup> -->
+    <!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Components\Server\src\Microsoft.AspNetCore.Components.Server.csproj" /> -->
+    <!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\DefaultBuilder\src\Microsoft.AspNetCore.csproj" /> -->
+    <!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Middleware\HttpsPolicy\src\Microsoft.AspNetCore.HttpsPolicy.csproj" /> -->
+    <!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Mvc\Mvc\src\Microsoft.AspNetCore.Mvc.csproj" /> -->
+  <!-- </ItemGroup> -->
+
+	<ItemGroup>
+	<ProjectReference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Components\Server\src\Microsoft.AspNetCore.Components.Server.csproj" />
+	<ProjectReference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\DefaultBuilder\src\Microsoft.AspNetCore.csproj" />
+	<ProjectReference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Middleware\HttpsPolicy\src\Microsoft.AspNetCore.HttpsPolicy.csproj" />
+	<ProjectReference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Mvc\Mvc\src\Microsoft.AspNetCore.Mvc.csproj" />
+	<ProjectReference Include="..\..\..\Web.Template\Web.Template.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Diagram\" />
+	</ItemGroup>
+
 
 </Project>

@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
+	<NoWarn>NETSDK1086</NoWarn>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Remove="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Components\Server\src\Microsoft.AspNetCore.Components.Server.csproj" />
+	  <ProjectReference Include="..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\DefaultBuilder\src\Microsoft.AspNetCore.csproj" />
+	  <ProjectReference Include="..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Middleware\HttpsPolicy\src\Microsoft.AspNetCore.HttpsPolicy.csproj" />
+	  <ProjectReference Include="..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Mvc\Mvc\src\Microsoft.AspNetCore.Mvc.csproj" />
+	</ItemGroup>
+
+	<!-- <ItemGroup> -->
+	<!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Components\Server\src\Microsoft.AspNetCore.Components.Server.csproj" /> -->
+	<!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\DefaultBuilder\src\Microsoft.AspNetCore.csproj" /> -->
+	<!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Middleware\HttpsPolicy\src\Microsoft.AspNetCore.HttpsPolicy.csproj" /> -->
+	<!-- <Reference Include="..\..\..\..\..\..\..\Users\Igor\source\repos\aspnetcore\src\Mvc\Mvc\src\Microsoft.AspNetCore.Mvc.csproj" /> -->
+	<!-- </ItemGroup> -->
+
+
+
+
+</Project>

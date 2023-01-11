@@ -22,6 +22,19 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "IIS Express Custom": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\IIS Express\\iisexpress.exe",
+      "commandLineArgs": "/config:\"C:\\Programming Projects\\Private\\Restack\\Components\\.vsd\\Restack.Components\\config\\Angular\\applicationhost.config\" /site:\"Angular.Web\" /apppool:\"Angular.Web AppPool\"",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_MODULE_DEBUG_FILE": "C:\\Programming Projects\\Private\\Restack\\Components\\logs\\IISLog1.txt",
+        "ANCMV2_PATH": "C:\\Users\\Igor\\Source\\Repos\\aspnetcore\\artifacts\\bin\\AspNetCoreModuleShim\\x64\\Debug\\aspnetcorev2.dll",
+        "LAUNCHER_PATH": "bin\\Debug\\net6.0\\Angular.Web",
+        "REQUEST_HANDLER_INPROCESS_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug",
+        "ANCM_LAUNCHER_PATH": "C:\\Programming Projects\\Private\\Restack\\Components\\Angular.Web\\bin\\Debug\\net6.0\\Angular.Web.exe"
+      }
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:27325",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "BlazorApp1": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5122",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "REQUEST_HANDLER_INPROCESS_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug"
+      }
+    }
+  }
+}

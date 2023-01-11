@@ -32,7 +32,7 @@ namespace Northwind.OData.Controllers
         public IActionResult Get(int key, string version = "1")
         {
             WriteLine($"ProductsController version {version}.");
-            Product? p = db.Products.Find(key);
+            Product p = db.Products.Find(key);
             if (p is null)
             {
                 return NotFound($"Product with id {key} not found.");

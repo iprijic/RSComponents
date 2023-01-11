@@ -1,0 +1,52 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:16498",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    //"BlazorApp2": {
+    //  "commandName": "Project",
+    //  "dotnetRunMessages": true,
+    //  "launchBrowser": true,
+    //  "applicationUrl": "http://localhost:5071",
+    //  "environmentVariables": {
+    //    "ASPNETCORE_ENVIRONMENT": "Development"
+    //  }
+    //},
+    "IIS Express": {
+      "commandName": "Executable", //"IISExpress", Executable
+      "executablePath": "C:\\Program Files\\IIS Express\\iisexpress.exe",
+      "commandLineArgs": "/config:\"C:\\Programming Projects\\Private\\Restack\\Components\\.vsd\\Restack.Components\\config\\applicationhost.config\" /site:\"BlazorApp2\" /apppool:\"BlazorApp2 AppPool\"",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+
+        "ASPNETCORE_MODULE_DEBUG_FILE": "C:\\Programming Projects\\Private\\Restack\\Components\\logs\\IISLog1.txt",
+
+        //"APP_POOL_ID": "BlazorApp2 AppPool",
+        //"APP_POOL_CONFIG": "C:\\Programming Projects\\Private\\Restack\\Components\\.vsd\\Restack.Components\\config\\applicationhost.config"
+
+        "ANCMV2_PATH": "C:\\Users\\Igor\\Source\\Repos\\aspnetcore\\artifacts\\bin\\AspNetCoreModuleShim\\x64\\Debug\\aspnetcorev2.dll",
+
+        //"ASPNETCORE_MODULE_OUTOFPROCESS_HANDLER": "C:\\Users\\Igor\\Source\\Repos\\aspnetcore\\artifacts\\bin\\OutOfProcessRequestHandler\\x64\\Debug\\aspnetcorev2_outofprocess.dll"
+        //"LAUNCHER_PATH": "C:\\Programming Projects\\Private\\Restack\\Components\\BlazorApp2\\bin\\Debug\\net6.0\\BlazorApp2.exe",
+        //"LAUNCHER_PATH": "C:\\Users\\Igor\\Source\\Repos\\aspnetcore\\.dotnet\\dotnet.exe",
+        //"LAUNCHER_ARGS": "C:\\Programming Projects\\Private\\Restack\\Components\\BlazorApp2\\bin\\Debug\\net6.0\\BlazorApp2.dll"
+        "LAUNCHER_PATH": "bin\\Debug\\net6.0\\BlazorApp2",
+
+        "REQUEST_HANDLER_INPROCESS_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug"
+
+
+
+        //"ANCM_LAUNCHER_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug\\aspnetcorev2_inprocess.dll"
+
+        //"LAUNCHER_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug\\aspnetcorev2_inprocess.dll"
+
+      }
+    }
+  }
+}
