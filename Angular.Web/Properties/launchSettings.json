@@ -1,12 +1,4 @@
-﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:10729",
-      "sslPort": 0
-    }
-  },
+{
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -18,10 +10,10 @@
     "Angular.Web": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "http://localhost:5000"
     },
     "IIS Express Custom": {
       "commandName": "Executable",
@@ -34,7 +26,16 @@
         "LAUNCHER_PATH": "bin\\Debug\\net6.0\\Angular.Web",
         "REQUEST_HANDLER_INPROCESS_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug",
         "ANCM_LAUNCHER_PATH": "C:\\Programming Projects\\Private\\Restack\\Components\\Angular.Web\\bin\\Debug\\net6.0\\Angular.Web.exe"
-      }
+      },
+      "jsWebView2Debugging": false
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:10729",
+      "sslPort": 0
     }
   }
 }
