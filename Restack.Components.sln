@@ -288,9 +288,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloDI.Console", "..\..\..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloDI.Tests", "..\..\..\..\E-Books\C# ASPdotNET\Dependency Injection Principles, Practices, and Patterns\code\DIPPP_source-code\HelloDI\src\HelloDI.Tests\HelloDI.Tests.csproj", "{7B5EB87C-7964-4947-895A-65508C2A257A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApp1", "AngularApp1\AngularApp1.csproj", "{9459093D-A41C-4551-BF3A-C0A3CD8E0B02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularApp1", "AngularApp1\AngularApp1.csproj", "{9459093D-A41C-4551-BF3A-C0A3CD8E0B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2", "Angular2\Angular2.csproj", "{F02D9DF7-FFE8-4D6A-8DE6-4A67F2B9CC77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularApp2", "Angular2\AngularApp2.csproj", "{F02D9DF7-FFE8-4D6A-8DE6-4A67F2B9CC77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
