@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ANFrameworkProxy": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:12654;http://localhost:12655"
+    }
+  }
+}
