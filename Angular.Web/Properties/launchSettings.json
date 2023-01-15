@@ -27,7 +27,8 @@
         "REQUEST_HANDLER_INPROCESS_PATH": "C:\\Users\\Igor\\source\\repos\\aspnetcore\\artifacts\\bin\\InProcessRequestHandler\\x64\\Debug",
         "ANCM_LAUNCHER_PATH": "C:\\Programming Projects\\Private\\Restack\\Components\\Angular.Web\\bin\\Debug\\net6.0\\Angular.Web.exe"
       },
-      "jsWebView2Debugging": false
+      "jsWebView2Debugging": false,
+      "nativeDebugging": false
     }
   },
   "iisSettings": {
