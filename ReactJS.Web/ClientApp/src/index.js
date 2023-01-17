@@ -5,14 +5,26 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import { createRoot } from 'react-dom/client'
+
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>,
-  rootElement);
+const root = createRoot(rootElement);
+
+//ReactDOM.render(
+//    <BrowserRouter basename={baseUrl}>
+//        <App />
+//    </BrowserRouter>,
+//    rootElement);
+
+root.render(
+    <React.StrictMode>
+        <BrowserRouter basename={baseUrl}>
+            <App />
+        </BrowserRouter>
+    </React.StrictMode>
+);
 
 registerServiceWorker();
 
